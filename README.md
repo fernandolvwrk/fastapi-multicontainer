@@ -16,10 +16,10 @@ To run the app on your local instance of Docker use:
 > docker compose up --build
 
 To test the app:
-http://127.0.0.1:8000
-http://127.0.0.1:8000/ping
-http://127.0.0.1:8000/hidden
+- http://127.0.0.1:8000
+- http://127.0.0.1:8000/ping
+- http://127.0.0.1:8000/hidden
 
 Uncomment ports section in docker.compose.yml to allow external access to secondary app services:
-http://127.0.0.1:8001
-http://127.0.0.1:8001/secondaryping
+- http://127.0.0.1:8001
+- http://127.0.0.1:8001/secondaryping
