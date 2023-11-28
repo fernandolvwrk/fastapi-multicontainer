@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  api2:
+    image: api2:latest
+    container_name: api2
+    build: ./api2/
+#    ports:
+#      - "8001:8001"
+# The ports section is commented out in this example. This makes the services provided by api2 inaccessible 
+# from outside the container, except for calls made from the main container over the internal network.
+# Uncomment to make these services available from outside. Services will be available from the container address
+# specifying the port number (additional firewall configuration could be needed).
+  entry:
+    depends_on:
+      - api2
+    image: entry:latest
+    container_name: entry
+    build: ./entry/
+    ports:
+    - "8000:8000"
